@@ -104,7 +104,7 @@ class Core {
   //       DirectOperationType::ContinuousOperationBySpeed);
   // }
 
-  uint8_t writeDirectOperatonType(uint32_t operatonType,
+  uint8_t writeDirectOperatonType(uint32_t operationType,
                                   bool changeDirectOperationTrigger = true) {
     if (changeDirectOperationTrigger) {
       auto error = writeDirectOperationTrigger(
@@ -114,7 +114,7 @@ class Core {
       }
     }
     return getModbus()->writeRegisterBy32t(
-        getAddress(), Registers::directDataOperationType, operatonType);
+        getAddress(), Registers::directDataOperationType, operationType);
   }
 
   uint8_t writeDirectOperationSpeed(int32_t speed,

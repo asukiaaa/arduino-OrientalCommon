@@ -54,7 +54,7 @@ const uint16_t IncrementalPushMotionByFeedbackPosition = 22;
 struct DirectOperation {
   uint32_t dataNumber = 0;
   uint32_t operationType =
-      DirectOperationType::IncrementalPositioningByCommandPosition;
+      DirectOperationType::ContinuousOperationBySpeed;
   int32_t position = 0;
   int32_t speed = 1000;
   uint32_t changeRate = 1000000;

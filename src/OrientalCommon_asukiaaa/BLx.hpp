@@ -9,11 +9,9 @@ class Base {
   virtual void begin(unsigned long baudrate,
                      unsigned long config = SERIAL_8E1) = 0;
   virtual void beginWithoutModbus() = 0;
-  virtual uint8_t writeForward() = 0;
   virtual uint8_t writeLock() = 0;
   virtual uint8_t writeStop() = 0;
-  virtual uint8_t writeReverse() = 0;
-  virtual uint8_t writeSpeed(uint16_t speed) = 0;
+  virtual uint8_t writeSpeed32t(int32_t speed) = 0;
 
   virtual uint8_t readAlarm(uint16_t *alarm) = 0;
   virtual uint8_t readLoadTorque(uint16_t *torquePercent) = 0;

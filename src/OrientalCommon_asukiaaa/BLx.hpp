@@ -13,9 +13,9 @@ class Base {
   virtual uint8_t writeStop() = 0;
   virtual uint8_t writeSpeed32t(int32_t speed) = 0;
 
-  virtual uint8_t readAlarm(uint16_t *alarm) = 0;
+  virtual uint8_t readAlarmU32t(uint32_t *alarm) = 0;
   virtual uint8_t readLoadTorquePercent(float *torquePercent) = 0;
-  virtual uint8_t readFeedbackSpeed(int32_t *speed) = 0;
+  virtual uint8_t readFeedbackSpeed32t(int32_t *speed) = 0;
   virtual uint8_t writeSetupConfiglIfNeeded() = 0;
 
   virtual rs485_asukiaaa::ModbusRtu::Central *getModbus() = 0;

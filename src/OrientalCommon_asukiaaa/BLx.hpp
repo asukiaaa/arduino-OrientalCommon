@@ -6,8 +6,7 @@ namespace BLx {
 
 class Base {
  public:
-  virtual void begin(unsigned long baudrate,
-                     unsigned long config = SERIAL_8E1) = 0;
+  virtual void begin(unsigned long baudrate, unsigned long config) = 0;
   virtual void beginWithoutModbus() = 0;
   virtual uint8_t writeLock() = 0;
   virtual uint8_t writeStop() = 0;
